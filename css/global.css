@@ -1,0 +1,24 @@
+:root {
+    --duration: .5s;
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+section {
+    padding: 50px 0px;
+}
