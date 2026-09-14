@@ -13,6 +13,7 @@
 body {
     font-family: "DM Sans", sans-serif;
     height: 5000px;
+    overflow-x: hidden;
 }
 
 h1,
