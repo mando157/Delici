@@ -1,0 +1,156 @@
+/** Header Section */
+#Home {
+    height: 100svh;
+}
+
+#Home .carousel-body .carousel-content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#Home .carousel-body .carousel-content {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#Home .carousel-body .carousel-content.active {
+    z-index: 3;
+}
+
+#Home .carousel-body .carousel-content[data-page-number="1"] {
+    background-image: url("../images/slider-1.jpg");
+}
+
+#Home .carousel-body .carousel-content[data-page-number="2"] {
+    background-image: url("../images/slider-2.jpg");
+}
+
+#Home .carousel-body .carousel-content[data-page-number="3"] {
+    background-image: url("../images/slider-3.jpg");
+}
+
+#Home .carousel-body .carousel-content .content {
+    position: relative;
+}
+
+#Home .carousel-body .carousel-content .content * {
+    margin-bottom: 20px;
+}
+
+#Home .carousel-body .carousel-content .content h1 {
+    font-size: 80px;
+}
+
+#Home .carousel-body .carousel-content .content h6 {
+    letter-spacing: var(--spacing);
+}
+
+#Home .carousel-body .carousel-content .content p {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/* & Next & Prev & */
+#Home .next,
+#Home .prev {
+    position: absolute;
+    border: 1px solid var(--main-color);
+    z-index: 10;
+    background-color: transparent;
+    color: var(--main-color);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+    transition-duration: var(--duration);
+}
+
+#Home .next {
+    right: 35px;
+}
+
+#Home .prev {
+    left: 35px;
+}
+
+#Home .next:hover,
+#Home .prev:hover {
+    color: #000;
+    background-color: var(--main-color);
+}
+
+#Home .next i,
+#Home .prev i {
+    transform: rotate(-45deg);
+}
+
+/* & indicators & */
+.indicators {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+}
+
+.indicators span {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicators span.active {
+    background-color: var(--main-color);
+}
+
+/* & Book A Table & */
+.book-table {
+    position: absolute;
+    z-index: 10;
+    bottom: 40px;
+    left: 40px;
+    background-color: var(--main-color);
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.book-table::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--main-color);
+    transform: rotate(45deg);
+    animation: rotate 10s infinite linear;
+}
+
+.book-table img {
+    width: 50%;
+}
+
+.book-table p {
+    font-size: 12px;
+    margin: 0px;
+}

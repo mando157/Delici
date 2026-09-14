@@ -1,5 +1,9 @@
 :root {
+    --main-color: #e4c590;
+
     --duration: .5s;
+
+    --spacing: 2px;
 }
 
 * {
@@ -7,7 +11,17 @@
 }
 
 body {
-    overflow-x: hidden;
+    font-family: "DM Sans", sans-serif;
+    height: 5000px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Forum";
 }
 
 a {
@@ -18,7 +32,66 @@ li {
     list-style: none;
 }
 
-
 section {
     padding: 50px 0px;
+}
+
+.decor-icon {
+    width: 100px;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+/* & Main Button & */
+.mainButton {
+    border: 2px solid var(--main-color);
+    padding: 15px 40px;
+    font-size: 14px;
+    background-color: transparent;
+    letter-spacing: var(--spacing);
+    position: relative;
+    border-radius: 5px;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.mainButton::before,
+.mainButton::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    height: 50%;
+    width: 100%;
+    background-color: var(--main-color);
+    transition-duration: var(--duration);
+    z-index: 0;
+}
+
+.mainButton::before {
+    top: 0px;
+    transform: translateY(-100%);
+}
+
+.mainButton::after {
+    bottom: 0px;
+    transform: translateY(100%);
+}
+
+.mainButton:hover::before,
+.mainButton:hover::after {
+    transform: translateY(0%);
+}
+
+.mainButton span {
+    position: relative;
+    color: var(--main-color);
+    transition-duration: var(--duration);
+    z-index: 1;
+}
+.mainButton:hover span {
+    color: #000;
 }

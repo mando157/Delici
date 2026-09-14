@@ -1,17 +1,93 @@
 /* 350 */
-@media (max-width: 1300px) {}
+@media (max-width: 1300px) {
+    .mainButton {
+        padding: 10px 15px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    /** Header Section */
+    #Home .carousel-body .carousel-content .content *:not(.decor-icon) {
+        margin-bottom: 10px;
+    }
+
+    #Home .carousel-body .carousel-content .content h1 {
+        font-size: 30px;
+    }
+
+    #Home .carousel-body .carousel-content .content h6 {
+        font-size: 14px;
+    }
+
+    #Home .carousel-body .carousel-content .content p {
+        font-size: 12px;
+    }
+
+    #Home .next,
+    #Home .prev {
+        display: none;
+    }
+
+    .book-table {
+        width: 80px;
+        height: 80px;
+        bottom: 30px;
+        left: 30px;
+    }
+
+    .book-table p {
+        font-size: 10px;
+    }
+
+}
 
 /* 450 */
-@media (min-width: 371px) and (max-width: 1300px) {}
+@media (min-width: 371px) and (max-width: 1300px) {
+
+    /** Header Section */
+    #Home .carousel-body .carousel-content .content *:not(.decor-icon) {
+        margin-bottom: 15px;
+    }
+
+    #Home .carousel-body .carousel-content .content h1 {
+        font-size: 40px;
+    }
+
+    #Home .carousel-body .carousel-content .content h6 {
+        font-size: 16px;
+    }
+
+    #Home .carousel-body .carousel-content .content p {
+        font-size: 14px;
+    }
+}
 
 /* 650 */
-@media (min-width: 577px) and (max-width: 1300px) {}
+@media (min-width: 577px) and (max-width: 1300px) {
+
+    /** Header Section */
+    #Home .carousel-body .carousel-content .content h1 {
+        font-size: 50px;
+    }
+}
 
 /* 850 */
-@media (min-width: 769px) and (max-width: 1300px) {}
+@media (min-width: 769px) and (max-width: 1300px) {
+
+    /** Header Section */
+    #Home .carousel-body .carousel-content .content h1 {
+        font-size: 70px;
+    }
+}
 
 /* 1050 */
-@media (min-width: 992px) and (max-width: 1300px) {}
+@media (min-width: 992px) and (max-width: 1300px) {
+        .mainButton {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
 
 /* 1250 */
 @media (min-width: 1181px) and (max-width: 1300px) {}

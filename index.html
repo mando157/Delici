@@ -21,16 +21,89 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/keyframes.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style.responsive.css">
 
-    <title>Nike</title>
+    <title>Delici</title>
 </head>
 
 <body>
 
+    <!-- *   Header Section   * -->
+    <header id="Home">
+        <div class="carousel-container h-100">
+            <!-- & Next & Prev & -->
+            <button class="next"><i class="fa-solid fa-angle-right"></i></button>
+            <button class="prev"><i class="fa-solid fa-angle-left"></i></button>
+
+            <!-- & indicators & -->
+            <div class="indicators">
+                <span class="active" data-target="1"></span>
+                <span data-target="2"></span>
+                <span data-target="3"></span>
+            </div>
+
+            <!-- & Carousel Body & -->
+            <div class="carousel-body h-100">
+                <div class="carousel-content h-100 active" data-page-number="1" >
+                    <div class="content">
+                        <h6 class="main-color">DELIGHTFUL EXPERIENCE</h6>
+                        <img src="./images/separator.svg" alt="decor" class="decor-icon">
+                        <h1 class="text-white">
+                            Flavors Inspired By
+                            <br>
+                            The Seasons
+                        </h1>
+                        <p class="text-white">Come with family & feel the joy of mouthwatering food</p>
+                        <a href="#Menu" class="mainButton">
+                            <span>VIEW OUR MENU</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-content h-100" data-page-number="2" >
+                    <div class="content">
+                        <h6 class="main-color">AMAZING & DELICIOUS</h6>
+                        <img src="./images/separator.svg" alt="decor" class="decor-icon">
+                        <h1 class="text-white">
+                            Where Every Flavor
+                            <br>
+                            Tells A Story
+                        </h1>
+                        <p class="text-white">Come with family & feel the joy of mouthwatering food</p>
+                        <a href="#Menu" class="mainButton">
+                            <span>VIEW OUR MENU</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-content h-100" data-page-number="3" >
+                    <div class="content">
+                        <h6 class="main-color">TRADATIONAL & HYGINE</h6>
+                        <img src="./images/separator.svg" alt="decor" class="decor-icon">
+                        <h1 class="text-white">
+                            For The Love Of
+                            <br>
+                            Delicious Food
+                        </h1>
+                        <p class="text-white">Come with family & feel the joy of mouthwatering food</p>
+                        <a href="#Menu" class="mainButton">
+                            <span>VIEW OUR MENU</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- & Book A Table & -->
+            <div class="book-table">
+                <img src="./images/book-icon-1.png" alt="book-table">
+                <p>BOOK A TABLE</p>
+            </div>
+        </div>
+    </header>
+
+
     <script src="./js/bootstrap.bundle.js"></script>
-    <script src="./js/"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/functions.js"></script>
     <script src="./js/script.js"></script>
 </body>
