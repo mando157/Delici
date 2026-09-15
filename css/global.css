@@ -96,3 +96,33 @@ section {
 .mainButton:hover span {
     color: #000;
 }
+
+/* & Main Link & */
+.mainLink {
+    position: relative;
+    color: #fff;
+    transition-duration: var(--duration);
+}
+
+.mainLink:hover ,
+.mainLink.active {
+    color: var(--main-color);
+}
+
+.mainLink::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: var(--duration);
+    height: 4px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.mainLink.active::after,
+.mainLink:hover::after {
+    width: 100%;
+}

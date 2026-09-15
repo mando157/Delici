@@ -1,11 +1,63 @@
+/** Navbar Section */
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo {
+    width: 140px;
+}
+
+nav .container .links ul {
+    display: flex;
+    gap: 15px;
+}
+
+nav .container .nav-icon {
+    width: 30px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav .container .nav-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+nav .container .nav-icon span:nth-of-type(1) {
+    animation: navSliderButton .5s infinite alternate linear;
+}
+
+nav .container .nav-icon span:nth-of-type(2) {
+    animation: navSliderButton .5s .3s infinite alternate linear;
+}
+
+nav .container .nav-icon span:nth-of-type(3) {
+    animation: navSliderButton .5s .6s infinite alternate linear;
+}
+
 /** Header Section */
 #Home {
     height: 100svh;
 }
-#Home .carousel-body{
+
+#Home .carousel-body {
     position: relative;
     overflow: hidden;
 }
+
 #Home .carousel-body .carousel-content {
     position: absolute;
     display: flex;

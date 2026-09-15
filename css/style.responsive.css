@@ -6,6 +6,11 @@
         margin-top: 10px;
     }
 
+    /** Navbar Section */
+    nav .container .links {
+        display: none;
+    }
+
     /** Header Section */
     #Home .carousel-body .carousel-content .content *:not(.decor-icon) {
         margin-bottom: 10px;
@@ -82,7 +87,7 @@
 
 /* 1050 */
 @media (min-width: 992px) and (max-width: 1300px) {
-        .mainButton {
+    .mainButton {
         padding: 10px 20px;
         font-size: 14px;
         margin-top: 20px;
