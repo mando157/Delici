@@ -5,9 +5,28 @@ let
     prevBtn = document.querySelector(".prev"),
 
     // * Indicators
-    indicators = document.querySelectorAll(".indicators span")
-    ;
+    indicators = document.querySelectorAll(".indicators span"),
 
+    // * Navbar
+    navBar = document.querySelector(".nav-bar"),
+    lastScrollY = window.scrollY;
+
+// * Navbar Section
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 10) {
+        navBar.classList.add("scrolled");
+    }else{
+        navBar.classList.remove("scrolled");
+    }
+
+    if (window.scrollY > lastScrollY) {
+        navBar.classList.add("up");
+    } else if (window.scrollY < lastScrollY) {
+        navBar.classList.remove("up");
+    }
+    lastScrollY = window.scrollY;
+});
 
 
 //* Next & Prev Buttons

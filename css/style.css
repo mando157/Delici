@@ -4,6 +4,16 @@ nav {
     width: 100%;
     z-index: 999;
     padding: 20px 0px;
+    transition-duration: var(--duration);
+    top: 0px;
+}
+
+nav.up {
+    transform: translateY(-100%);
+}
+
+nav.scrolled {
+    background-color: #202020;
 }
 
 nav .container {
@@ -255,4 +265,73 @@ nav .container .nav-icon span:nth-of-type(3) {
 .book-table p {
     font-size: 12px;
     margin: 0px;
+}
+
+/** About Us Section */
+#About {
+    position: relative;
+    background-image: url("../images/bg.png");
+    background-color: #0E0D0C;
+    overflow: hidden;
+}
+
+#About>img {
+    position: absolute;
+    animation: aboutBg 2s alternate linear infinite;
+}
+#About>img:nth-of-type(1){
+    top:0px;
+    right: 0px;
+}
+#About>img:nth-of-type(2){
+    bottom:0px;
+    left: 0px;
+}
+
+#About .content .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+#About .content .box .item {
+    overflow: hidden;
+}
+
+#About .content .box .item::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -90%;
+    z-index: 3;
+    background: linear-gradient(to right, rgba(0, 0, 0, .1) 0%, rgba(255, 255, 255, .4) 100%);
+    transform: skew(-25deg);
+    transition-duration: 1s;
+}
+
+#About .content .box .item:hover::after {
+    left: 130%;
+}
+
+#About .content .box .item img:nth-of-type(1) {
+    transition-duration: 1s;
+}
+
+#About .content .box .item:hover img:nth-of-type(1) {
+    transform: rotateY(-180deg);
+}
+
+#About .content .box .item img.img-fluid {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#About .content .box .text a {
+    color: var(--main-color);
+    font-size: 14px;
 }

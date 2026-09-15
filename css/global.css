@@ -34,7 +34,7 @@ li {
 }
 
 section {
-    padding: 50px 0px;
+    padding: 100px 0px;
 }
 
 .decor-icon {
@@ -125,4 +125,18 @@ section {
 .mainLink.active::after,
 .mainLink:hover::after {
     width: 100%;
+}
+
+/** Title */
+.title h4{
+    color: var(--main-color);
+    font-size: 16px;
+    letter-spacing: var(--spacing);
+}
+.title img {
+    width: 100px;
+    margin: 10px 0px;
+}
+.title h2{
+    color: #fff;
 }
