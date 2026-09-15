@@ -267,6 +267,118 @@ nav .container .nav-icon span:nth-of-type(3) {
     margin: 0px;
 }
 
+/* & Book A Table popup & */
+.popup {
+    position: fixed;
+    background-color: rgba(228, 197, 144, .5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    overflow: auto;
+    opacity: 0;
+    transition-duration: var(--duration);
+}
+
+.popup::-webkit-scrollbar {
+    width: 5px;
+}
+
+.popup::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+
+.popup::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+.popup .popup-element {
+    position: relative;
+    margin: 30px;
+    background-color: #171819;
+    width: 600px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 30px 40px;
+    transform: translateY(calc(-100% - 30px));
+    transition-duration: 1s;
+}
+.popup.show .popup-element{
+    transform: translateY(0px);
+}
+.popup .popup-element>i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup .popup-element p {
+    color: #A7A7A7;
+}
+
+.popup .popup-element p span {
+    color: var(--main-color);
+}
+
+.popup .popup-element form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popup .popup-element form .part {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup .popup-element form .part input,
+.popup .popup-element form textarea {
+    border: 1px solid #a7a7a7;
+    padding: 8px 16px;
+    color: #a7a7a7;
+    background-color: transparent;
+    border-radius: 5px;
+    transition-duration: var(--duration);
+}
+
+.popup .popup-element form .part input:focus,
+.popup .popup-element form textarea:focus {
+    box-shadow: none;
+    border: 1px solid #fff;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+.popup .popup-element form .part input {
+    width: calc(50% - 10px);
+}
+
+.popup .popup-element form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.popup .popup-element form button {
+    width: fit-content;
+    margin: auto;
+}
+
 /** About Us Section */
 #About {
     position: relative;
@@ -279,12 +391,14 @@ nav .container .nav-icon span:nth-of-type(3) {
     position: absolute;
     animation: aboutBg 2s alternate linear infinite;
 }
-#About>img:nth-of-type(1){
-    top:0px;
+
+#About>img:nth-of-type(1) {
+    top: 0px;
     right: 0px;
 }
-#About>img:nth-of-type(2){
-    bottom:0px;
+
+#About>img:nth-of-type(2) {
+    bottom: 0px;
     left: 0px;
 }
 

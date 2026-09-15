@@ -9,14 +9,18 @@ let
 
     // * Navbar
     navBar = document.querySelector(".nav-bar"),
-    lastScrollY = window.scrollY;
+    lastScrollY = window.scrollY,
+
+    // * Popup Element
+    popupEle = document.querySelector(".popupEle")
+    ;
 
 // * Navbar Section
 
 window.addEventListener("scroll", function () {
     if (window.scrollY > 10) {
         navBar.classList.add("scrolled");
-    }else{
+    } else {
         navBar.classList.remove("scrolled");
     }
 
@@ -83,3 +87,8 @@ for (let i = 1; i <= indicators.length; i++) {
         indicatorTarget.classList.add("active");
     });
 }
+
+// * Popup Element
+popupEle.addEventListener("click", function (e) {
+    e.stopPropagation();
+});

@@ -31,6 +31,34 @@
 </head>
 
 <body>
+    <!-- *   Table popup   * -->
+    <div class="popup text-light" data-popup-name="bookTable" onclick="closePopup('bookTable')" >
+        <div class="popup-element popupEle">
+            <i class="fa-regular fa-circle-xmark" onclick="closePopup('bookTable')"></i>
+            <div class="title text-center">
+                <h4>RESERVATION</h4>
+                <img src="./images/separator.svg" alt="separator">
+                <h2 class="display-6 my-3">Book A Table</h2>
+            </div>
+            <p class="text-center">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with
+                credit card, no charges will be aplly for online booking. no refundable.</p>
+            <p class="text-center">Booking request <span>+20-102-108-0042</span> or fill out the order form</p>
+
+            <form action="#">
+                <div class="part">
+                    <input type="text" placeholder="Reservation Name...">
+                    <input type="text" placeholder="Phone Number...">
+                </div>
+                <div class="part">
+                    <input type="number" min="1" placeholder="Seats...">
+                    <input type="datetime-local">
+                </div>
+                <textarea name="massage" id="massage" placeholder="Notes Massage..."></textarea>
+                <button class="mainButton"><span>Book A Table</span></button>
+            </form>
+        </div>
+    </div>
+
     <!-- *   NavBar Section   * -->
     <nav class="nav-bar">
         <div class="container">
@@ -120,7 +148,7 @@
             </div>
 
             <!-- & Book A Table & -->
-            <div class="book-table">
+            <div class="book-table" onclick="openPopup('bookTable')">
                 <img src="./images/book-icon-1.png" alt="book-table">
                 <p>BOOK A TABLE</p>
             </div>
