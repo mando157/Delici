@@ -72,6 +72,7 @@ nav .container .nav-icon span:nth-of-type(3) {
     background-image: url("../images/bg.png");
     background-color: #0E0D0C;
 }
+
 .nav-popup.show .nav-popup-ele {
     transform: translateX(0%);
 }
@@ -97,10 +98,12 @@ nav .container .nav-icon span:nth-of-type(3) {
 .nav-popup .nav-popup-ele .links ul li a {
     transition-duration: var(--duration);
 }
+
 .nav-popup .nav-popup-ele .links ul li .rotate-decor {
     display: none;
 }
-.nav-popup .nav-popup-ele .links ul li.active .rotate-decor{
+
+.nav-popup .nav-popup-ele .links ul li.active .rotate-decor {
     display: inline-block;
 }
 
@@ -527,4 +530,67 @@ nav .container .nav-icon span:nth-of-type(3) {
 #About .content .box .text a {
     color: var(--main-color);
     font-size: 14px;
+}
+
+/** Our Story Section */
+
+#Story {
+    background-color: #171819;
+}
+
+#Story .part-1 {
+    padding: 0px 20px;
+}
+
+#Story .part-1 .book-now a {
+    color: var(--main-color);
+    width: fit-content;
+    margin: auto;
+}
+
+#Story .part-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Story .part-2 .box{
+    position: relative;
+    width: 80%;
+}
+#Story .part-2 .box > img {
+    display: block;
+    width: 100%;
+}
+
+#Story .part-2 .poster {
+    position: absolute;
+}
+
+#Story .part-2 .poster-1 {
+    top: -40px;
+    right: -40px;
+    width: 130px;
+    height: 130px;
+    background-image: url("../images/badge-1.png");
+    background-size: cover;
+    background-position: center;
+}
+#Story .part-2 .poster-1 img{
+    width: 100%;
+    animation: rotate 8s infinite linear;
+
+}
+#Story .part-2 .poster-2 {
+    bottom:-30px;
+    left: -30px;
+    width: 200px;
+}
+#Story .part-2 .poster-2 .pattern{
+    position: absolute;
+    width: 50%;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50% , -50%);
 }
