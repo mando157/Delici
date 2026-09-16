@@ -12,7 +12,7 @@ let
     lastScrollY = window.scrollY,
 
     // * Popup Element
-    popupEle = document.querySelector(".popupEle")
+    popupEle = document.querySelectorAll(".popupEle")
     ;
 
 // * Navbar Section
@@ -89,6 +89,8 @@ for (let i = 1; i <= indicators.length; i++) {
 }
 
 // * Popup Element
-popupEle.addEventListener("click", function (e) {
-    e.stopPropagation();
+popupEle.forEach(function(element){
+    element.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
 });

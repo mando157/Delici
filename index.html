@@ -32,7 +32,7 @@
 
 <body>
     <!-- *   Table popup   * -->
-    <div class="popup text-light" data-popup-name="bookTable" onclick="closePopup('bookTable')" >
+    <div class="popup text-light" data-popup-name="bookTable" onclick="closePopup('bookTable')">
         <div class="popup-element popupEle">
             <i class="fa-regular fa-circle-xmark" onclick="closePopup('bookTable')"></i>
             <div class="title text-center">
@@ -40,7 +40,8 @@
                 <img src="./images/separator.svg" alt="separator">
                 <h2 class="display-6 my-3">Book A Table</h2>
             </div>
-            <p class="text-center">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with
+            <p class="text-center">Restaurant will be open for all days, Sunday night will be closed, All booking
+                payment is secured with
                 credit card, no charges will be aplly for online booking. no refundable.</p>
             <p class="text-center">Booking request <span>+20-102-108-0042</span> or fill out the order form</p>
 
@@ -59,6 +60,41 @@
         </div>
     </div>
 
+    <!-- *   NavBar popup   * -->
+    <div class="nav-popup text-white popup" data-popup-name="navPopup" onclick="closePopup('navPopup')">
+        <div class="nav-popup-ele popupEle">
+            <i class="fa-regular fa-circle-xmark cancel" onclick="closePopup('navPopup')"></i>
+            <div class="logo">
+                <img src="./images/logo.png" class="img-fluid d-block m-auto" alt="logo">
+            </div>
+            <div class="delici-img mx-auto">
+                <img src="./images/sidebar-image.jpg" class="img-fluid d-block" alt="sidebar">
+            </div>
+            <div class="links">
+                <ul class="mb-0 p-0">
+                    <li class="active"><span class="rotate-decor"></span><a href="#Home">Home</a></li>
+                    <li><span class="rotate-decor"></span><a href="#About">About Us</a></li>
+                    <li><span class="rotate-decor"></span><a href="#Story">Our Story</a></li>
+                    <li><span class="rotate-decor"></span><a href="#SpecialDish">Special Dish</a></li>
+                    <li><span class="rotate-decor"></span><a href="#Menu">Menu</a></li>
+                    <li><span class="rotate-decor"></span><a href="#Chefs">Our Chefs</a></li>
+                    <li><span class="rotate-decor"></span><a href="#Contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="text text-center">
+                <h2 class="text-white h1">Visit Us</h2>
+                <p><i class="fa-solid fa-location-dot"></i> Delicious City, London 9578, UK</p>
+                <p><i class="fa-regular fa-clock"></i>  Daily : 8.00 am to 10.00 pm</p>
+                <p><i class="fa-regular fa-envelope"></i> booking@restaurant.com</p>
+            </div>
+            <span class="rotate-decor mx-auto d-block"></span>
+            <div class="book-now">
+                <span class="fw-bolder">Booking Request</span>
+                <a href="tel:+201021080042" class="mainLink">+20-102-108-0042</a>
+            </div>
+        </div>
+    </div>
+
     <!-- *   NavBar Section   * -->
     <nav class="nav-bar">
         <div class="container">
@@ -67,7 +103,7 @@
             </div>
             <div class="links">
                 <ul class="mb-0 p-0">
-                    <li><a href="#Home" class="mainLink active">Home</a></li>
+                    <li class="active"><a href="#Home" class="mainLink">Home</a></li>
                     <li><a href="#About" class="mainLink">About Us</a></li>
                     <li><a href="#Story" class="mainLink">Our Story</a></li>
                     <li><a href="#SpecialDish" class="mainLink">Special Dish</a></li>
@@ -76,7 +112,7 @@
                     <li><a href="#Contact" class="mainLink">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="nav-icon">
+            <div class="nav-icon" onclick="openPopup('navPopup')">
                 <span></span>
                 <span></span>
                 <span></span>

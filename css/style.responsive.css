@@ -59,6 +59,19 @@
         width: 100%;
     }
 
+    /* & NavBar popup & */
+    .nav-popup .nav-popup-ele {
+        width: 300px;
+    }
+
+    .nav-popup .nav-popup-ele .text p {
+        font-size: 12px;
+    }
+
+    .nav-popup .nav-popup-ele .book-now a {
+        font-size: 22px;
+    }
+
 }
 
 /* 450 */
@@ -107,6 +120,19 @@
 
     .popup .popup-element form .part input {
         width: calc(50% - 10px);
+    }
+
+    /* & NavBar popup & */
+    .nav-popup .nav-popup-ele {
+        width: 400px;
+    }
+
+    .nav-popup .nav-popup-ele .text p {
+        font-size: 16px;
+    }
+
+    .nav-popup .nav-popup-ele .book-now a {
+        font-size: 28px;
     }
 }
 

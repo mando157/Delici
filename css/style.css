@@ -37,6 +37,7 @@ nav .container .nav-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 nav .container .nav-icon span {
@@ -56,6 +57,82 @@ nav .container .nav-icon span:nth-of-type(2) {
 
 nav .container .nav-icon span:nth-of-type(3) {
     animation: navSliderButton .5s .6s infinite alternate linear;
+}
+
+/* & NavBar popup & */
+.nav-popup .nav-popup-ele {
+    position: absolute;
+    width: 400px;
+    left: 0;
+    transform: translateX(-100%);
+    height: 100%;
+    min-height: fit-content;
+    padding: 50px;
+    transition-duration: 1s;
+    background-image: url("../images/bg.png");
+    background-color: #0E0D0C;
+}
+.nav-popup.show .nav-popup-ele {
+    transform: translateX(0%);
+}
+
+.nav-popup .nav-popup-ele>*:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.nav-popup .nav-popup-ele .delici-img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+}
+
+.nav-popup .nav-popup-ele .links ul li {
+    width: 200px;
+    border-top: 1px solid #A7A7A7;
+    border-bottom: 1px solid #A7A7A7;
+    padding: 10px;
+    margin: auto;
+}
+
+.nav-popup .nav-popup-ele .links ul li a {
+    transition-duration: var(--duration);
+}
+.nav-popup .nav-popup-ele .links ul li .rotate-decor {
+    display: none;
+}
+.nav-popup .nav-popup-ele .links ul li.active .rotate-decor{
+    display: inline-block;
+}
+
+.nav-popup .nav-popup-ele .links ul li.active a,
+.nav-popup .nav-popup-ele .links ul li a:hover {
+    color: var(--main-color);
+}
+
+.nav-popup .nav-popup-ele .text p {
+    color: #A7A7A7;
+}
+
+.nav-popup .nav-popup-ele .book-now {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-popup .nav-popup-ele .book-now a {
+    width: fit-content;
+    color: var(--main-color);
+    font-size: 28px;
+}
+
+.nav-popup .nav-popup-ele .rotate-decor {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--main-color);
+    margin-right: 10px;
+    animation: rotate 10s infinite linear;
 }
 
 /** Header Section */
@@ -315,10 +392,12 @@ nav .container .nav-icon span:nth-of-type(3) {
     transform: translateY(calc(-100% - 30px));
     transition-duration: 1s;
 }
-.popup.show .popup-element{
+
+.popup.show .popup-element {
     transform: translateY(0px);
 }
-.popup .popup-element>i {
+
+.cancel {
     position: absolute;
     top: 20px;
     right: 20px;

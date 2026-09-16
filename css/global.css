@@ -27,6 +27,7 @@ h6 {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 li {
@@ -105,7 +106,8 @@ section {
 }
 
 .mainLink:hover ,
-.mainLink.active {
+.mainLink.active,
+li.active .mainLink {
     color: var(--main-color);
 }
 
@@ -122,6 +124,7 @@ section {
     border-bottom: 1px solid var(--main-color);
 }
 
+li.active .mainLink::after,
 .mainLink.active::after,
 .mainLink:hover::after {
     width: 100%;
