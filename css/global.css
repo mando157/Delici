@@ -46,6 +46,11 @@ section {
     color: var(--main-color);
 }
 
+.main-bg {
+    background-image: url("../images/bg.png");
+    background-color: #0E0D0C;
+}
+
 /* & Main Button & */
 .mainButton {
     border: 2px solid var(--main-color);
@@ -94,6 +99,7 @@ section {
     transition-duration: var(--duration);
     z-index: 1;
 }
+
 .mainButton:hover span {
     color: #000;
 }
@@ -105,7 +111,7 @@ section {
     transition-duration: var(--duration);
 }
 
-.mainLink:hover ,
+.mainLink:hover,
 .mainLink.active,
 li.active .mainLink {
     color: var(--main-color);
@@ -131,15 +137,17 @@ li.active .mainLink::after,
 }
 
 /** Title */
-.title h4{
+.title h4 {
     color: var(--main-color);
     font-size: 16px;
     letter-spacing: var(--spacing);
 }
+
 .title img {
     width: 100px;
     margin: 10px 0px;
 }
-.title h2{
+
+.title h2 {
     color: #fff;
 }

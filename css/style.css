@@ -69,8 +69,6 @@ nav .container .nav-icon span:nth-of-type(3) {
     min-height: fit-content;
     padding: 50px;
     transition-duration: 1s;
-    background-image: url("../images/bg.png");
-    background-color: #0E0D0C;
 }
 
 .nav-popup.show .nav-popup-ele {
@@ -464,14 +462,12 @@ nav .container .nav-icon span:nth-of-type(3) {
 /** About Us Section */
 #About {
     position: relative;
-    background-image: url("../images/bg.png");
-    background-color: #0E0D0C;
     overflow: hidden;
 }
 
 #About>img {
     position: absolute;
-    animation: aboutBg 2s alternate linear infinite;
+    animation: hop 2s alternate linear infinite;
 }
 
 #About>img:nth-of-type(1) {
@@ -554,11 +550,13 @@ nav .container .nav-icon span:nth-of-type(3) {
     justify-content: center;
     align-items: center;
 }
-#Story .part-2 .box{
+
+#Story .part-2 .box {
     position: relative;
     width: 80%;
 }
-#Story .part-2 .box > img {
+
+#Story .part-2 .box>img {
     display: block;
     width: 100%;
 }
@@ -576,21 +574,65 @@ nav .container .nav-icon span:nth-of-type(3) {
     background-size: cover;
     background-position: center;
 }
-#Story .part-2 .poster-1 img{
+
+#Story .part-2 .poster-1 img {
     width: 100%;
     animation: rotate 8s infinite linear;
 
 }
+
 #Story .part-2 .poster-2 {
-    bottom:-30px;
+    bottom: -30px;
     left: -30px;
     width: 200px;
 }
-#Story .part-2 .poster-2 .pattern{
+
+#Story .part-2 .poster-2 .pattern {
     position: absolute;
     width: 50%;
     display: block;
     top: 50%;
     left: 50%;
-    transform: translate( -50% , -50%);
+    transform: translate(-50%, -50%);
+}
+
+/** Our Story Section */
+#Special {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Special .row {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#Special .part-1 {
+    min-height: 100vh;
+    background-image: url("../images/special-dish.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#Special .part-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Special .part-2 .item {
+    position: relative;
+    width: 65%;
+}
+
+#Special .part-2 .item>*:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+#Special .part-2 .item>img {
+    position: absolute;
+    left: -50px;
+    animation: hop 2s alternate linear infinite;
 }
