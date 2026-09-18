@@ -112,11 +112,14 @@
         transition-delay: 1.5s;
     }
 
-
-
     #Menu .content .menu-content .item .frame .image {
         width: 80px;
         height: 80px;
+    }
+
+    #Chefs .content .box .item {
+        width: 250px;
+        margin: auto;
     }
 }
 
@@ -204,6 +207,10 @@
         bottom: -50px;
     }
 
+
+    #Chefs .content .box .item {
+        width: 100%;
+    }
 }
 
 /* 850 */
