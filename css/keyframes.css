@@ -24,3 +24,23 @@
         transform: translateY(30px);
     }
 }
+
+@keyframes rotateLetter {
+    from {
+        transform: rotateY(270deg);
+        opacity: 0;
+    }
+    
+    to {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+}
+@keyframes rotateLoad {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

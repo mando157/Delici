@@ -41,6 +41,7 @@ section>img {
     position: absolute;
     animation: hop 2s alternate linear infinite;
 }
+
 .decor-icon {
     width: 100px;
 }
@@ -153,4 +154,9 @@ li.active .mainLink::after,
 
 .title h2 {
     color: #fff;
+}
+
+/** Hide */
+.hide {
+    opacity: 0;
 }

@@ -237,3 +237,27 @@ window.addEventListener("scroll", function () {
     updateActiveLinks(navLinks, navBar);
     updateActiveLinks(navPopupLinks, navPopup);
 });
+
+// * Loading Page
+let loading = document.querySelector(".loading"),
+    secondText = loading.querySelector(".second");
+
+let letters = secondText.textContent.split("");
+
+secondText.innerHTML = "";
+
+letters.forEach((letter, index) => {
+    let span = document.createElement("span");
+
+    span.textContent = letter;
+    span.style.setProperty("--i", index);
+
+    secondText.append(span);
+});
+
+window.addEventListener("DOMContentLoaded" , function(){
+    loading.classList.add("hide");
+    setTimeout(function(){
+        loading.classList.add("d-none");
+    } , 500);
+});

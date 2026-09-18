@@ -117,9 +117,15 @@
         height: 80px;
     }
 
+    /** Our Chefs Section */
     #Chefs .content .box .item {
         width: 250px;
         margin: auto;
+    }
+
+    /** Loading Page */
+    .loading .content .text p {
+        font-size: 50px;
     }
 }
 
@@ -157,6 +163,11 @@
     #Menu .content .menu-content .item .frame .image {
         width: 100px;
         height: 100px;
+    }
+
+    /** Loading Page */
+    .loading .content .text p {
+        font-size: 60px;
     }
 }
 
@@ -211,6 +222,11 @@
     #Chefs .content .box .item {
         width: 100%;
     }
+
+    /** Loading Page */
+    .loading .content .text p {
+        font-size: 70px;
+    }
 }
 
 /* 850 */
@@ -249,6 +265,11 @@
 
     #Menu .content .menu-content .main-menu.show .item:nth-of-type(6) {
         transition-delay: 1.5s;
+    }
+
+    /** Loading Page */
+    .loading .content .text p {
+        font-size: 80px;
     }
 }
 
