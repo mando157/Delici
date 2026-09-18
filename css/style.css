@@ -127,7 +127,7 @@ nav .container .nav-icon span:nth-of-type(3) {
     font-size: 28px;
 }
 
-.nav-popup .nav-popup-ele .rotate-decor {
+.rotate-decor {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -637,4 +637,174 @@ nav .container .nav-icon span:nth-of-type(3) {
     animation: hop 2s alternate linear infinite;
 }
 
-/**  */
+/** Menu Section */
+#Menu {
+    background-color: #171819;
+}
+
+#Menu .content .button-container {
+    overflow: auto;
+}
+#Menu .content .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    padding: 20px 0px;
+    min-width: fit-content;
+}
+
+#Menu .content .buttons button {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, .5);
+    width: 1px;
+    height: 100%;
+}
+
+#Menu .content .menu-content .main-menu {
+    position: relative;
+    display: none;
+    opacity: 0;
+    transition-duration: var(--duration);
+}
+
+#Menu .content .menu-content .main-menu.active {
+    display: block;
+}
+
+#Menu .content .menu-content .main-menu.show {
+    opacity: 1;
+}
+
+#Menu .content .menu-content .main-menu-content {
+    justify-content: space-between;
+}
+
+#Menu .content .menu-content .main-menu .item {
+    transform: translate(-50px, -50px);
+    opacity: 0;
+}
+
+#Menu .content .menu-content .main-menu.show .item {
+    transform: translate(0px, 0px);
+    transition-duration: 1s;
+    opacity: 1;
+}
+
+#Menu .content .menu-content .main-menu.show .item:nth-of-type(3) {
+    transition-delay: .3s;
+}
+
+#Menu .content .menu-content .main-menu.show .item:nth-of-type(5) {
+    transition-delay: .6s;
+}
+
+#Menu .content .menu-content .main-menu.show .item:nth-of-type(2) {
+    transition-delay: .9s;
+}
+
+#Menu .content .menu-content .main-menu.show .item:nth-of-type(4) {
+    transition-delay: 1.2s;
+}
+
+#Menu .content .menu-content .main-menu.show .item:nth-of-type(6) {
+    transition-delay: 1.5s;
+}
+
+#Menu .content .menu-content .item .frame {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#Menu .content .menu-content .item .frame .image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+#Menu .content .menu-content .item .frame .image .layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    background-color: rgba(228, 197, 144, .5);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition-duration: var(--duration);
+}
+
+#Menu .content .menu-content .item:hover .frame .image .layout {
+    opacity: 1;
+}
+
+#Menu .content .menu-content .item .frame .image .layout i {
+    transition-duration: var(--duration);
+    cursor: pointer;
+}
+
+#Menu .content .menu-content .item:hover .frame .image .layout i {
+    transform: rotate(90deg);
+}
+
+#Menu .content .menu-content .item .frame .image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition-duration: var(--duration);
+}
+
+#Menu .content .menu-content .item:hover .frame .image img {
+    transform: scale(1.2);
+}
+
+#Menu .content .menu-content .item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Menu .content .menu-content .item .text .header {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#Menu .content .menu-content .item .text .header h4 {
+    margin: 0;
+}
+
+#Menu .content .menu-content .item .text .header span {
+    display: block;
+    flex-grow: 1;
+    height: 4px;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    margin: 0px 15px;
+}
+
+#Menu .content .menu-content .item .text .body p {
+    color: rgba(255, 255, 255, .5);
+    font-size: 14px;
+    margin-bottom: 0px;
+}
