@@ -464,12 +464,6 @@ nav .container .nav-icon span:nth-of-type(3) {
     position: relative;
     overflow: hidden;
 }
-
-#About>img {
-    position: absolute;
-    animation: hop 2s alternate linear infinite;
-}
-
 #About>img:nth-of-type(1) {
     top: 0px;
     right: 0px;
@@ -479,7 +473,6 @@ nav .container .nav-icon span:nth-of-type(3) {
     bottom: 0px;
     left: 0px;
 }
-
 #About .content .box {
     display: flex;
     flex-direction: column;
@@ -639,9 +632,18 @@ nav .container .nav-icon span:nth-of-type(3) {
 
 /** Menu Section */
 #Menu {
+    position: relative;
     background-color: #171819;
+    overflow: hidden;
 }
-
+#Menu>img:nth-of-type(1) {
+    top: 0px;
+    left: 0px;
+}
+#Menu>img:nth-of-type(2) {
+    bottom: 0px;
+    right: 0px;
+}
 #Menu .content .button-container {
     overflow: auto;
 }

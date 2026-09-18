@@ -9,7 +9,10 @@ let
 
     // * Navbar
     navBar = document.querySelector(".nav-bar"),
+    navPopup = document.querySelector(".nav-popup"),
     lastScrollY = window.scrollY,
+    navLinks = navBar.querySelectorAll("li a"),
+    navPopupLinks = navPopup.querySelectorAll(".nav-popup-ele li a"),
 
     // * Popup Element
     popupEle = document.querySelectorAll(".popupEle"),
@@ -21,8 +24,9 @@ let
     drinksContainer = document.querySelector(".drinks"),
 
     // * Menu Buttons
-    menuButtons = document.querySelectorAll("#Menu .buttons button");
-;
+    menuButtons = document.querySelectorAll("#Menu .buttons button"),
+    navbarLinksArr = document.querySelectorAll(".nav-bar .links ul li"),
+    navbarPopupLinksArr = document.querySelectorAll(".nav-popup .links ul li");
 
 // * Navbar Section
 window.addEventListener("scroll", function () {
@@ -126,7 +130,6 @@ BreakFast.forEach(function (menuItem) {
         </div>
     `
 });
-
 // * Lunch Section
 Lunch.forEach(function (menuItem) {
     lunchContainer.innerHTML += `
@@ -152,7 +155,6 @@ Lunch.forEach(function (menuItem) {
         </div>
     `
 });
-
 // * Dinner Section
 Dinner.forEach(function (menuItem) {
     dinnerContainer.innerHTML += `
@@ -178,7 +180,6 @@ Dinner.forEach(function (menuItem) {
         </div>
     `
 });
-
 // * Drinks Section
 Drinks.forEach(function (menuItem) {
     drinksContainer.innerHTML += `
@@ -228,3 +229,11 @@ menuButtons.forEach(function (button) {
     });
 });
 
+// * Navbar Links
+updateActive(navbarLinksArr);
+updateActive(navbarPopupLinksArr);
+
+window.addEventListener("scroll", function () {
+    updateActiveLinks(navLinks, navBar);
+    updateActiveLinks(navPopupLinks, navPopup);
+});

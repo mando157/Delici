@@ -37,7 +37,10 @@ li {
 section {
     padding: 100px 0px;
 }
-
+section>img {
+    position: absolute;
+    animation: hop 2s alternate linear infinite;
+}
 .decor-icon {
     width: 100px;
 }
